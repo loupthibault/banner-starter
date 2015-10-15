@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <!-- inject:files:css -->
+    {% block css %}{% endblock %}
+    <!-- endinject -->
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    {% block body %}{% endblock %}
+    <!-- inject:files:js -->
+    {% block javascript %}{% endblock %}
+    <!-- endinject -->
+  </body>
+</html>

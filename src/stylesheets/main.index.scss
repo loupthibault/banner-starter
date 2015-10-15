@@ -1,0 +1,72 @@
+@import 'lib/_normalize';
+@import 'base/_colors';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $dgts-grey-light;
+  margin: 0;
+  padding: 0;
+  color: $dgts-grey;
+  border-top: 5px solid $dgts-grey;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+main, header {
+  position: relative;
+}
+
+header {
+  margin-bottom: 1em;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  padding: 1.2em;
+}
+
+.logo {
+  max-width: 12em;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}
+
+h1 {
+  font-size: 1.4em;
+  margin: 0;
+  margin-bottom: 1.2em;
+}
+
+p {
+  margin: 1em auto;
+  padding: 0;
+}
+a {
+  font-size: 1em;
+  color: $dgts-grey;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23,1,.32,1);
+}
+
+a:hover {
+  color: $dgts-red;
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+li {
+  display: list-item;
+}

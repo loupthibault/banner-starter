@@ -1,0 +1,37 @@
+{% extends 'layouts/application.html' %}
+
+{% block css %}
+  {{ super() }}
+  {% for file in config.css %}
+    <link rel="stylesheet" href="stylesheets/{{file}}">
+  {% endfor %}
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <script>
+    window.bannerConfig = {
+      width: {{config.width | default(640)}},
+      height: {{config.height | default(960)}},
+      zoneClickURL: "{{config.width | default('')}}"
+    }
+  </script>
+{% endblock %}
+
+{% block javascript %}
+  {{ super() }}
+  {% for file in config.js %}
+    <script src="javascripts/{{file}}"></script>
+  {% endfor %}
+{% endblock %}
+
+
+{% block body %}
+  <div id='banner'>
+    <div id='animation'>
+      {% block content %}
+      {% endblock %}
+    </div>
+    <div id='zoneClick' class='absolute-fill'></div>
+  </div>
+{% endblock %}

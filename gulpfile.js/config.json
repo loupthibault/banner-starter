@@ -1,0 +1,77 @@
+{
+
+  "root" : {
+    "src": "./src",
+    "tmp": "./.tmp",
+    "dest": "./public"
+  },
+
+  "banners" : [
+    {
+      "width": 320,
+      "height": 480,
+      "html": "banner_320x640.html",
+      "js": ["main.js"],
+      "css": ["main.css"],
+      "include": "includes/animation.html"
+    }
+  ],
+
+  "tasks": {
+
+    "browserSync": {
+      "development": {
+        "server": {
+          "baseDir": ".tmp"
+        }
+      },
+      "production": {
+        "server": {
+          "baseDir": "public"
+        }
+      }
+    },
+
+    "js": {
+      "src": "javascripts",
+      "dest": "javascripts",
+      "extractSharedJs": false,
+      "entries": {
+        "main": ["./main.js"]
+      },
+      "extensions": ["js"]
+    },
+
+    "css": {
+      "src": "stylesheets",
+      "dest": "stylesheets",
+      "autoprefixer": {
+        "browsers": ["last 3 version"]
+      },
+      "sass": {
+        "indentedSyntax": false
+      },
+      "extensions": ["scss", "css"]
+    },
+
+    "images": {
+      "src": "images",
+      "dest": "images",
+      "optimizations": {
+        "progressive": false,
+        "optimizationLevel": 3
+      },
+      "extensions": ["jpg", "png", "svg", "gif"]
+    },
+
+    "html": {
+      "src": "html",
+      "dest": ".",
+      "htmlmin": {
+        "collapseWhitespace": true
+      },
+      "extensions": ["html", "json"],
+      "excludeFolders": ["layouts", "shared", "macros", "data", "includes"]
+    }
+  }
+}

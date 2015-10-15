@@ -1,0 +1,30 @@
+{#
+  Nunjucks Templating!
+  Homepage: https://mozilla.github.io/nunjucks/
+  Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% extends 'layouts/application.html' %}
+
+{% block css %}
+  <link rel="stylesheet" href="stylesheets/main.index.css">
+{% endblock %}
+
+{% block body %}
+  <header>
+    <div class='wrapper'>
+      <img class='logo' src="/images/index/logo_digitaslbi.svg" alt="DigitasLBi">
+    </div>
+  </header>
+  <main>
+    <div class='wrapper'>
+      <h1>{{title}} :</h1>
+      <p>{{description}}</p>
+      <ul>
+        {% for banner in banners %}
+         <li>• <a href="{{banner.html}}">{{banner.name | default(banner.html)}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </main>
+{% endblock %}

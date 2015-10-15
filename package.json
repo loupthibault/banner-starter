@@ -1,18 +1,21 @@
 {
-  "name": "digitaslbifr-banner-starter",
+  "name": "starter-banners",
   "version": "1.0.0",
   "description": "A starter for making amazing banner",
-  "author": "Loup THIBAULT AKA MaitreLoup",
+  "author": "Loup THIBAULT, MaitreLoup",
   "engines": {
     "node": "4.1.2",
     "npm": "2.14.6"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git://gitlab.digitas.fr/digitas_front/starter_banners.git"
   },
   "scripts": {
-    "test": "test"
+    "gulp": "gulp",
+    "init": "gulp build:html",
+    "development": "gulp",
+    "production": "gulp build:production"
   },
   "devDependencies": {
     "babel-core": "^5.8.25",
@@ -24,16 +27,28 @@
     "gulp-base64": "^0.1.3",
     "gulp-changed": "^1.3.0",
     "gulp-data": "^1.2.0",
+    "gulp-htmlmin": "^1.2.0",
+    "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.3.0",
+    "gulp-img64": "0.0.6",
+    "gulp-inject": "^3.0.0",
+    "gulp-minify-css": "^1.2.1",
     "gulp-notify": "^2.2.0",
     "gulp-nunjucks-render": "^1.0.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
     "gulp-sequence": "^0.4.1",
+    "gulp-sizereport": "^1.1.3",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.5",
+    "imports-loader": "^0.6.4",
     "lodash": "^3.10.1",
+    "merge-stream": "^1.0.0",
     "require-dir": "^0.3.0",
     "webpack": "^1.12.2"
+  },
+  "dependencies": {
+    "gsap": "^1.18.0"
   }
 }
