@@ -12,6 +12,7 @@
     "url": "git://gitlab.digitas.fr/digitas_front/starter_banners.git"
   },
   "scripts": {
+    "start": "gulp",
     "gulp": "gulp",
     "init": "gulp build:html",
     "development": "gulp",

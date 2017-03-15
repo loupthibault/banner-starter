@@ -1,7 +1,5 @@
 # Starter Banner
 
-![Starter Banner](src/images/index/dgtslbi-banners-logo.jpg)
-
 ```bash
 git clone https://gitlab.digitas.fr/digitas_front/starter_banners.git MyApp
 cd MyApp
