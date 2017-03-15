@@ -1,0 +1,9 @@
+const ww  = window.bannerConfig.width;
+const hh  = window.bannerConfig.height;
+const wwRef = window.bannerConfig.widthRef;
+const hhRef = window.bannerConfig.heightRef;
+const scX = ww / wwRef;
+const scY = hh / hhRef;
+const sc = scX > scY ? scY : scX;
+const xx = parseInt((ww - wwRef*sc) / 2 + .5);
+const yy = parseInt((hh - hhRef*sc) / 2 + .5);

@@ -1,0 +1,31 @@
+{% extends 'layouts/banner.html' %}
+
+{% block css %}
+  <link rel="stylesheet" href="stylesheets/responsive.css">
+  {{ super() }}
+{% endblock %}
+
+{% block head %}
+ {{super()}}
+   <script>
+     window.bannerConfig.widthRef = 640;
+     window.bannerConfig.heightRef = 960;
+   </script>
+{% endblock %}
+
+{% block javascript %}
+  <script src="javascripts/responsive.js"></script>
+  {{ super() }}
+{% endblock %}
+
+{% block body %}
+  <div id='banner'>
+    <div id='responsive-wrapper'>
+      <div id="animation">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+    <div id='zoneClick' class='absolute-fill'></div>
+  </div>
+{% endblock %}
